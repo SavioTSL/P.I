@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Relatório de Avaliação</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <script src="../JAVASCRIPT/script.js"></script>
+        <link rel="stylesheet" href="../CSS/relatorio.css">
+        <style>
+            .graficos .box {
+                display: none; /* Esconde todas as divs inicialmente */
+            }
+        </style>
+    </head>    
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>        
+        <input type="text" id="turmaSearch" placeholder="Digite a turma">
+
+        <!-- Botão para mostrar opções -->
+        <select id="graficoSelector">
+            <option value="">Selecione um gráfico</option>
+            <option value="todos">Ver Todos os Gráficos</option>
+            <option value="docente_presenca">Docente Presença</option>
+            <option value="docente_pontualidade">Docente Pontualidade</option>
+            <option value="docente_comunicacao">Docente Comunicação</option>
+            <option value="docente_dominio">Docente Domínio</option>
+            <option value="docente_interesse">Docente Interesse</option>
+            <option value="docente_interacao">Docente Interação</option>
+            <option value="docente_avaliacao">Docente Avaliação</option>
+            <option value="curso_needs">Curso Needs</option>
+            <option value="curso_temas">Curso Temas</option>
+            <option value="curso_carga">Curso Carga</option>
+            <option value="curso_relacao">Curso Relação</option>
+            <option value="material_suficiente">Material Suficiente</option>
+            <option value="instalacoes_satisfatorias">Instalações Satisfatórias</option>
+            <option value="coordenacao_presente">Coordenação Presente</option>
+            <option value="aluno_presenca">Aluno Presença</option>
+            <option value="aluno_pontualidade">Aluno Pontualidade</option>
+            <option value="aluno_motivacao">Aluno Motivação</option>
+            <option value="aluno_participacao">Aluno Participação</option>
+            <option value="aluno_capacidade">Aluno Capacidade</option>
+            <option value="aluno_aproveitamento">Aluno Aproveitamento</option>
+        </select>
+
+        <button id="printButton">Imprimir Relatório</button>
+    
+
+        <div class="graficos">
+            <div class="box" id="docente_presenca">
+                <h4>Docente Presença</h4>
+                <canvas id="docente_presencaChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_pontualidade">
+                <h4>Docente Pontualidade</h4>
+                <canvas id="docente_pontualidadeChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_comunicacao">
+                <h4>Docente Comunicação</h4>
+                <canvas id="docente_comunicacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_dominio">
+                <h4>Docente Domínio</h4>
+                <canvas id="docente_dominioChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_interesse">
+                <h4>Docente Interesse</h4>
+                <canvas id="docente_interesseChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_interacao">
+                <h4>Docente Interação</h4>
+                <canvas id="docente_interacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="docente_avaliacao">
+                <h4>Docente Avaliação</h4>
+                <canvas id="docente_avaliacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="curso_needs">
+                <h4>Curso Needs</h4>
+                <canvas id="curso_needsChart"></canvas>
+            </div>
+            
+            <div class="box" id="curso_temas">
+                <h4>Curso Temas</h4>
+                <canvas id="curso_temasChart"></canvas>
+            </div>
+            
+            <div class="box" id="curso_carga">
+                <h4>Curso Carga</h4>
+                <canvas id="curso_cargaChart"></canvas>
+            </div>
+            
+            <div class="box" id="curso_relacao">
+                <h4>Curso Relação</h4>
+                <canvas id="curso_relacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="material_suficiente">
+                <h4>Material Suficiente</h4>
+                <canvas id="material_suficienteChart"></canvas>
+            </div>
+            
+            <div class="box" id="instalacoes_satisfatorias">
+                <h4>Instalações Satisfatórias</h4>
+                <canvas id="instalacoes_satisfatoriasChart"></canvas>
+            </div>
+            
+            <div class="box" id="coordenacao_presente">
+                <h4>Coordenação Presente</h4>
+                <canvas id="coordenacao_presenteChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_presenca">
+                <h4>Aluno Presença</h4>
+                <canvas id="aluno_presencaChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_pontualidade">
+                <h4>Aluno Pontualidade</h4>
+                <canvas id="aluno_pontualidadeChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_motivacao">
+                <h4>Aluno Motivação</h4>
+                <canvas id="aluno_motivacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_participacao">
+                <h4>Aluno Participação</h4>
+                <canvas id="aluno_participacaoChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_capacidade">
+                <h4>Aluno Capacidade</h4>
+                <canvas id="aluno_capacidadeChart"></canvas>
+            </div>
+            
+            <div class="box" id="aluno_aproveitamento">
+                <h4>Aluno Aproveitamento</h4>
+                <canvas id="aluno_aproveitamentoChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+    $('#graficoSelector').on('change', function() {
+        var selectedValue = $(this).val();
+
+        // Esconde todas as divs
+        $('.box').hide().removeClass('centralizado');
+
+        if (selectedValue === 'todos') {
+            // Mostra todas as divs
+            $('.box').show();
+        } else if (selectedValue) {
+            // Mostra a div selecionada e centraliza
+            $('#' + selectedValue).show().addClass('centralizado');
+        }
+    });
+
+    // Função para imprimir a página
+    $('#printButton').on('click', function() {
+        window.print();
+    });
+});
+    </script>
+</body>
+</html>
+
+

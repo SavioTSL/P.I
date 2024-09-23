@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Discente</title>
+    <link rel="stylesheet" href="../CSS/avaliacao.css">
+</head>
+<body>
+    <h1 id="texto1">Olá, seja muito bem vindo a avaliação do curso</h1>
+
+    <div class="container">
+        <form action="../PHP/processa.php" method="post">
+            <div class="form-group">
+
+                <label for="nome">Informe seu Nome</label><br>
+                <input type="text" name="nome" id="nome"><br>
+
+                <label for="turma">Informe sua Turma</label><br>
+                <input type="text" name="turma" id="turma"><br>
+
+                <h1>DOCENTE (Profissional que desenvolveu o curso)</h1>
+
+                
+                    <p>O docente esteve presente todos os dias?</p>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" required name="docente_presenca" id="docente_presenca_sim" class="t1" value="Sim">
+                            <label for="docente_presenca_sim">Sim</label>
+                        </div>
+                    
+                        <div class="radio-item">
+                            <input type="radio" required name="docente_presenca" id="docente_presenca_nao" class="t1" value="Não">
+                            <label for="docente_presenca_nao">Não</label>
+                        </div>
+                    
+                        <div class="radio-item">
+                            <input type="radio" required name="docente_presenca" id="docente_presenca_parcial" class="t1" value="Parcial">
+                            <label for="docente_presenca_parcial">Parcial</label>
+                        </div>
+                    
+                        <div class="radio-item">
+                            <input type="radio" required name="docente_presenca" id="docente_presenca_nao_atendeu" class="t1" value="Não Atendeu">
+                            <label for="docente_presenca_nao_atendeu">Não Atendeu</label>
+                        </div>
+                    </div>                    
+                
+
+                <p>O docente chegou sempre na hora prevista para o início do curso?</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_pontualidade" id="docente_pontualidade_sim" class="t1" value="Sim">
+                        <label for="docente_pontualidade_sim">Sim</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_pontualidade" id="docente_pontualidade_nao" class="t1" value="Não">
+                        <label for="docente_pontualidade_nao">Não</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_pontualidade" id="docente_pontualidade_parcial" class="t1" value="Parcial">
+                        <label for="docente_pontualidade_parcial">Parcial</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_pontualidade" id="docente_pontualidade_nao_atendeu" class="t1" value="Não Atendeu">
+                        <label for="docente_pontualidade_nao_atendeu">Não Atendeu</label>
+                    </div>
+                </div>
+                
+
+                <p>A comunicação do docente foi clara?</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_comunicacao" id="docente_comunicacao_sim" class="t1" value="Sim">
+                        <label for="docente_comunicacao_sim">Sim</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_comunicacao" id="docente_comunicacao_nao" class="t1" value="Não">
+                        <label for="docente_comunicacao_nao">Não</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_comunicacao" id="docente_comunicacao_parcial" class="t1" value="Parcial">
+                        <label for="docente_comunicacao_parcial">Parcial</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_comunicacao" id="docente_comunicacao_nao_atendeu" class="t1" value="Não Atendeu">
+                        <label for="docente_comunicacao_nao_atendeu">Não Atendeu</label>
+                    </div>
+                </div>
+                
+                <p>O docente apresentou domínio do conteúdo?</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_dominio" id="docente_dominio_sim" class="t1" value="Sim">
+                        <label for="docente_dominio_sim">Sim</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_dominio" id="docente_dominio_nao" class="t1" value="Não">
+                        <label for="docente_dominio_nao">Não</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_dominio" id="docente_dominio_parcial" class="t1" value="Parcial">
+                        <label for="docente_dominio_parcial">Parcial</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_dominio" id="docente_dominio_nao_atendeu" class="t1" value="Não Atendeu">
+                        <label for="docente_dominio_nao_atendeu">Não Atendeu</label>
+                    </div>
+                </div>
+                
+
+                <p>O docente despertou interesse dos alunos durante as aulas?</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_interesse" id="docente_interesse_sim" class="t1" value="Sim">
+                        <label for="docente_interesse_sim">Sim</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_interesse" id="docente_interesse_nao" class="t1" value="Não">
+                        <label for="docente_interesse_nao">Não</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_interesse" id="docente_interesse_parcial" class="t1" value="Parcial">
+                        <label for="docente_interesse_parcial">Parcial</label>
+                    </div>
+                
+                    <div class="radio-item">
+                        <input type="radio" required name="docente_interesse" id="docente_interesse_nao_atendeu" class="t1" value="Não Atendeu">
+                        <label for="docente_interesse_nao_atendeu">Não Atendeu</label>
+                    </div>
+                </div>
+                
+                                <p>O docente teve boa capacidade de interação com os alunos?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_interacao" id="docente_interacao_sim" class="t1" value="Sim">
+                                        <label for="docente_interacao_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_interacao" id="docente_interacao_nao" class="t1" value="Não">
+                                        <label for="docente_interacao_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_interacao" id="docente_interacao_parcial" class="t1" value="Parcial">
+                                        <label for="docente_interacao_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_interacao" id="docente_interacao_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="docente_interacao_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a forma de avaliação do docente -->
+                                <p>A forma de avaliar do docente foi satisfatória?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_avaliacao" id="docente_avaliacao_sim" class="t1" value="Sim">
+                                        <label for="docente_avaliacao_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_avaliacao" id="docente_avaliacao_nao" class="t1" value="Não">
+                                        <label for="docente_avaliacao_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_avaliacao" id="docente_avaliacao_parcial" class="t1" value="Parcial">
+                                        <label for="docente_avaliacao_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="docente_avaliacao" id="docente_avaliacao_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="docente_avaliacao_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <h1>CONTEÚDO DO CURSO</h1>
+                
+                                <!-- Pergunta sobre a adequação do curso -->
+                                <p>O curso atendeu as necessidades e objetivos desejados?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_needs" id="curso_needs_sim" class="t1" value="Sim">
+                                        <label for="curso_needs_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_needs" id="curso_needs_nao" class="t1" value="Não">
+                                        <label for="curso_needs_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_needs" id="curso_needs_parcial" class="t1" value="Parcial">
+                                        <label for="curso_needs_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_needs" id="curso_needs_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="curso_needs_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a atualidade dos temas -->
+                                <p>Os temas trabalhados foram atuais?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_temas" id="curso_temas_sim" class="t1" value="Sim">
+                                        <label for="curso_temas_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_temas" id="curso_temas_nao" class="t1" value="Não">
+                                        <label for="curso_temas_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_temas" id="curso_temas_parcial" class="t1" value="Parcial">
+                                        <label for="curso_temas_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_temas" id="curso_temas_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="curso_temas_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a carga horária -->
+                                <p>A carga horária foi suficiente?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_carga" id="curso_carga_sim" class="t1" value="Sim">
+                                        <label for="curso_carga_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_carga" id="curso_carga_nao" class="t1" value="Não">
+                                        <label for="curso_carga_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_carga" id="curso_carga_parcial" class="t1" value="Parcial">
+                                        <label for="curso_carga_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_carga" id="curso_carga_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="curso_carga_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a relação teoria e prática -->
+                                <p>Houve relação entre a teoria e prática?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_relacao" id="curso_relacao_sim" class="t1" value="Sim">
+                                        <label for="curso_relacao_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_relacao" id="curso_relacao_nao" class="t1" value="Não">
+                                        <label for="curso_relacao_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_relacao" id="curso_relacao_parcial" class="t1" value="Parcial">
+                                        <label for="curso_relacao_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_relacao" id="curso_relacao_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="curso_relacao_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+
+                                <h1>MATERIAL/ INSUMOS</h1>
+                
+                                <!-- Pergunta sobre a suficiência dos materiais -->
+                                <p>Os materiais foram suficientes para atender as atividades desenvolvidas durante o curso?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="material_suficiente" id="material_suficiente_sim" class="t1" value="Sim">
+                                        <label for="material_suficiente_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="material_suficiente" id="material_suficiente_nao" class="t1" value="Não">
+                                        <label for="material_suficiente_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="material_suficiente" id="material_suficiente_parcial" class="t1" value="Parcial">
+                                        <label for="material_suficiente_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="material_suficiente" id="material_suficiente_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="material_suficiente_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <h1>INSTALAÇÕES FÍSICAS (Local onde aconteceu o curso)</h1>
+                
+                                <!-- Pergunta sobre a satisfação com o espaço -->
+                                <p>O espaço onde aconteceu o curso foi satisfatório?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="instalacoes_satisfatorias" id="instalacoes_satisfatorias_sim" class="t1" value="Sim">
+                                        <label for="instalacoes_satisfatorias_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="instalacoes_satisfatorias" id="instalacoes_satisfatorias_nao" class="t1" value="Não">
+                                        <label for="instalacoes_satisfatorias_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="instalacoes_satisfatorias" id="instalacoes_satisfatorias_parcial" class="t1" value="Parcial">
+                                        <label for="instalacoes_satisfatorias_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="instalacoes_satisfatorias" id="instalacoes_satisfatorias_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="instalacoes_satisfatorias_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <h1>ACOMPANHAMENTO ADMINISTRATIVO E PEDAGÓGICO</h1>
+                
+                                <!-- Pergunta sobre a presença da coordenação -->
+                                <p>Coordenação esteve presente nos momentos necessários?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="coordenacao_presente" id="coordenacao_presente_sim" class="t1" value="Sim">
+                                        <label for="coordenacao_presente_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="coordenacao_presente" id="coordenacao_presente_nao" class="t1" value="Não">
+                                        <label for="coordenacao_presente_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="coordenacao_presente" id="coordenacao_presente_parcial" class="t1" value="Parcial">
+                                        <label for="coordenacao_presente_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="coordenacao_presente" id="coordenacao_presente_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="coordenacao_presente_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <h1>AUTO AVALIAÇÃO</h1>
+                
+                                <!-- Pergunta sobre a presença do aluno -->
+                                <p>Você esteve presente todos os dias?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_presenca" id="aluno_presenca_sim" class="t1" value="Sim">
+                                        <label for="aluno_presenca_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_presenca" id="aluno_presenca_nao" class="t1" value="Não">
+                                        <label for="aluno_presenca_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_presenca" id="aluno_presenca_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_presenca_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_presenca" id="aluno_presenca_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_presenca_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a pontualidade do aluno -->
+                                <p>Você chegou sempre no horário previsto para início do curso?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_pontualidade" id="aluno_pontualidade_sim" class="t1" value="Sim">
+                                        <label for="aluno_pontualidade_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_pontualidade" id="aluno_pontualidade_nao" class="t1" value="Não">
+                                        <label for="aluno_pontualidade_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_pontualidade" id="aluno_pontualidade_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_pontualidade_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_pontualidade" id="aluno_pontualidade_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_pontualidade_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a motivação do aluno -->
+                                <p>Você se sentiu motivado/interessado durante as aulas?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_motivacao" id="aluno_motivacao_sim" class="t1" value="Sim">
+                                        <label for="aluno_motivacao_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_motivacao" id="aluno_motivacao_nao" class="t1" value="Não">
+                                        <label for="aluno_motivacao_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_motivacao" id="aluno_motivacao_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_motivacao_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_motivacao" id="aluno_motivacao_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_motivacao_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre a participação do aluno -->
+                                <p>Você contribuiu com sua participação para o grupo?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_participacao" id="aluno_participacao_sim" class="t1" value="Sim">
+                                        <label for="aluno_participacao_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_participacao" id="aluno_participacao_nao" class="t1" value="Não">
+                                        <label for="aluno_participacao_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_participacao" id="aluno_participacao_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_participacao_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_participacao" id="aluno_participacao_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_participacao_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Pergunta sobre o aproveitamento do aluno -->
+                                <p>Você considera que teve um bom aproveitamento?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_aproveitamento" id="aluno_aproveitamento_sim" class="t1" value="Sim">
+                                        <label for="aluno_aproveitamento_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_aproveitamento" id="aluno_aproveitamento_nao" class="t1" value="Não">
+                                        <label for="aluno_aproveitamento_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_aproveitamento" id="aluno_aproveitamento_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_aproveitamento_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_aproveitamento" id="aluno_aproveitamento_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_aproveitamento_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+                                
+                                <!-- Pergunta sobre a capacidade de aplicar o aprendizado -->
+                                <p>Você se considera capaz de desenvolver o que aprendeu no curso?</p>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_capacidade" id="aluno_capacidade_sim" class="t1" value="Sim">
+                                        <label for="aluno_capacidade_sim">Sim</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_capacidade" id="aluno_capacidade_nao" class="t1" value="Não">
+                                        <label for="aluno_capacidade_nao">Não</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_capacidade" id="aluno_capacidade_parcial" class="t1" value="Parcial">
+                                        <label for="aluno_capacidade_parcial">Parcial</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="aluno_capacidade" id="aluno_capacidade_nao_atendeu" class="t1" value="Não Atendeu">
+                                        <label for="aluno_capacidade_nao_atendeu">Não Atendeu</label>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Comentários e sugestões -->
+                                <p>Caso seja do seu interesse, deixe aqui comentários e sugestões, objetivando a melhoria dos próximos cursos:</p>
+
+                                <textarea name="comentarios" id="comentarios"></textarea>
+                
+                                <h1>COMO FICOU SABENDO SOBRE O CURSO?</h1>
+                                <div class="radio-group2">
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_redes_sociais" class="t1" value="Redes sociais">
+                                        <label for="curso_origem_redes_sociais">Redes sociais</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_indicacao" class="t1" value="Indicação de alguém">
+                                        <label for="curso_origem_indicacao">Indicação de alguém</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_panfletagem" class="t1" value="Panfletagem">
+                                        <label for="curso_origem_panfletagem">Panfletagem</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_radio_tv" class="t1" value="Rádio/TV">
+                                        <label for="curso_origem_radio_tv">Rádio/TV</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_senac" class="t1" value="Senac">
+                                        <label for="curso_origem_senac">Senac</label>
+                                    </div>
+                                
+                                    <div class="radio-item">
+                                        <input type="radio" required name="curso_origem" id="curso_origem_outro" class="t1" value="Outro">
+                                        <label for="curso_origem_outro">Outro</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Botão de envio -->
+                                <button type="submit">Enviar Avaliação</button>
+
+                                <img src="../IMAGENS/logo-senac.png" alt="Logo Senac" class="logo-senac">
+
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
